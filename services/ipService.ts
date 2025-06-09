@@ -7,7 +7,7 @@ export interface IPResponse {
 class IPService {
   async fetchIP(): Promise<IPResponse> {
     const response = await axios.get<IPResponse>(
-      "https://api.ipify.org?format=json"
+      "/api/ip?format=json"
     );
     return response.data;
   }
