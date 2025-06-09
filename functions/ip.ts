@@ -1,6 +1,4 @@
-
-
-export const onRequest: PagesFunction = async (context) => {
+export const onRequest = async (context: any) => {
   // 与 ipService.ts 保持一致，使用 ipify
   const resp = await fetch("https://api.ipify.org?format=json");
   const data = await resp.json();
